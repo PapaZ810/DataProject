@@ -25,16 +25,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="137.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-cC-Gz4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-cC-Gz4">
                                             <rect key="frame" x="0.0" y="46" width="50" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="x1R-VP-W2X"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGv-B4-zbU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGv-B4-zbU">
                                             <rect key="frame" x="69" y="-9" width="314" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Bucket item here">
                                                     <attributes>
@@ -44,9 +45,8 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEf-50-iHf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEf-50-iHf">
                                             <rect key="frame" x="0.0" y="116" width="414" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Author">
                                                     <attributes>
@@ -58,7 +58,24 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TEf-50-iHf" firstAttribute="top" secondItem="Md4-cC-Gz4" secondAttribute="bottom" constant="26" id="9sS-TX-btf"/>
+                                        <constraint firstItem="Md4-cC-Gz4" firstAttribute="leading" secondItem="TEf-50-iHf" secondAttribute="leading" id="Agr-tz-vCn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QGv-B4-zbU" secondAttribute="trailing" constant="11" id="LtW-L0-siU"/>
+                                        <constraint firstItem="Md4-cC-Gz4" firstAttribute="leading" secondItem="bUV-ch-2p1" secondAttribute="leading" id="MKK-ho-RRw"/>
+                                        <constraint firstItem="Md4-cC-Gz4" firstAttribute="centerY" secondItem="bUV-ch-2p1" secondAttribute="centerY" id="TDn-IO-6lO"/>
+                                        <constraint firstItem="QGv-B4-zbU" firstAttribute="leading" secondItem="bUV-ch-2p1" secondAttribute="leadingMargin" constant="49" id="Tm0-Ip-wB5"/>
+                                        <constraint firstItem="QGv-B4-zbU" firstAttribute="top" secondItem="bUV-ch-2p1" secondAttribute="topMargin" constant="-20" id="WWd-mB-hWP"/>
+                                        <constraint firstItem="TEf-50-iHf" firstAttribute="top" secondItem="QGv-B4-zbU" secondAttribute="bottom" constant="85" id="gGn-mK-ies"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TEf-50-iHf" secondAttribute="bottom" constant="-10" id="vKh-FT-7ti"/>
+                                        <constraint firstAttribute="trailing" secondItem="TEf-50-iHf" secondAttribute="trailing" id="xiN-fu-1wE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bucketItemSignature" destination="TEf-50-iHf" id="Nkg-w5-Sys"/>
+                                    <outlet property="bucketItemSymbol" destination="QGv-B4-zbU" id="gqE-jh-eW1"/>
+                                    <outlet property="bucketItemText" destination="Md4-cC-Gz4" id="nFk-nb-4lk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
