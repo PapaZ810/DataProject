@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CD91E57E21AC7D3500B6878B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD91E57D21AC7D3500B6878B /* AppDelegate.swift */; };
-		CD91E58021AC7D3500B6878B /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD91E57F21AC7D3500B6878B /* DataViewController.swift */; };
 		CD91E58321AC7D3500B6878B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD91E58121AC7D3500B6878B /* Main.storyboard */; };
 		CD91E58521AC7D4000B6878B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD91E58421AC7D4000B6878B /* Assets.xcassets */; };
 		CD91E58821AC7D4000B6878B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD91E58621AC7D4000B6878B /* LaunchScreen.storyboard */; };
+		CDB6EEA221B1BDA500A80C6D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6EEA121B1BDA500A80C6D /* DataViewController.swift */; };
+		CDB6EEA421B1BDE600A80C6D /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6EEA321B1BDE600A80C6D /* BucketItemCell.swift */; };
+		CDB6EEA621B1BEE200A80C6D /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6EEA521B1BEE200A80C6D /* BucketItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD91E57A21AC7D3400B6878B /* DataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD91E57D21AC7D3500B6878B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD91E57F21AC7D3500B6878B /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		CD91E58221AC7D3500B6878B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD91E58421AC7D4000B6878B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD91E58721AC7D4000B6878B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD91E58921AC7D4000B6878B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB6EEA121B1BDA500A80C6D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		CDB6EEA321B1BDE600A80C6D /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
+		CDB6EEA521B1BEE200A80C6D /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,8 @@
 			children = (
 				CD91E59221AC7DA100B6878B /* Model */,
 				CD91E59121AC7D9700B6878B /* Controller */,
-				CD91E59021AC7D8700B6878B /* View */,
 				CD91E58F21AC7D6500B6878B /* Resources */,
+				CD91E59021AC7D8700B6878B /* View */,
 			);
 			path = DataProject;
 			sourceTree = "<group>";
@@ -84,7 +88,8 @@
 		CD91E59121AC7D9700B6878B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CD91E57F21AC7D3500B6878B /* DataViewController.swift */,
+				CDB6EEA121B1BDA500A80C6D /* DataViewController.swift */,
+				CDB6EEA321B1BDE600A80C6D /* BucketItemCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 		CD91E59221AC7DA100B6878B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDB6EEA521B1BEE200A80C6D /* BucketItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				TargetAttributes = {
 					CD91E57921AC7D3400B6878B = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -167,7 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD91E58021AC7D3500B6878B /* DataViewController.swift in Sources */,
+				CDB6EEA621B1BEE200A80C6D /* BucketItem.swift in Sources */,
+				CDB6EEA421B1BDE600A80C6D /* BucketItemCell.swift in Sources */,
+				CDB6EEA221B1BDA500A80C6D /* DataViewController.swift in Sources */,
 				CD91E57E21AC7D3500B6878B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -337,7 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
