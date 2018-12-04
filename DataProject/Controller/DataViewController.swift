@@ -27,7 +27,7 @@ public class DataViewController: UITableViewController
                 for line in bucketLines
                 {
                     let item = line.components(separatedBy:",")
-                    items.append(buxketItem(contents: item[0], author: item[11]))
+                    items.append(BucketItem(contents: item[0], author: item[1]))
                 }
             }
         }
@@ -39,7 +39,7 @@ public class DataViewController: UITableViewController
     }
     
     
-    public override func viewDidLoad()
+    public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
 
@@ -65,7 +65,7 @@ public class DataViewController: UITableViewController
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! BucketItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dataIdentifier", for: indexPath) as! BucketItemCell
 
         cell.currentBucketItem = bucketList[indexPath.row]
 
